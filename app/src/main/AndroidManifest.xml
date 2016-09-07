@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tellustek.jerous.myfirstapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".HelloAndroid">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewAty">
+
+            <!-- 用隱式INTENT改寫，可讓其他app CALL此activity -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.tellustek.jerous.myfirstapp.intent.action.NewAty" />
+            </intent-filter>
+            <!-- END -->
+        </activity>
+        <activity
+            android:name=".ActBaseThemeDialog"
+            android:theme="@style/Base.Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".EmptyTestAty"
+            android:label="EmptyTestAty">
+
+            <!-- android:exported="false" -->
+
+
+            <!-- 用隱式INTENT改寫，可讓其他app CALL此activity -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.tellustek.jerous.myfirstapp.intent.action.EmptyTestAty" />
+            </intent-filter>
+            <!-- END -->
+        </activity>
+        <activity
+            android:name=".EmptyAty2"
+            android:label="EmptyAty2">
+
+            <!-- 用隱式INTENT改寫，可讓其他app CALL此activity -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.tellustek.jerous.myfirstapp.intent.action.EmptyTestAty" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+            <!-- END -->
+        </activity>
+        <activity android:name=".ForBrowerAty">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ContextMethod"></activity>
+    </application>
+
+</manifest>
