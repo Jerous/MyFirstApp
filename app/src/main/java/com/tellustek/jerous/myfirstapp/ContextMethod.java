@@ -20,11 +20,12 @@ public class ContextMethod extends AppCompatActivity {
         //tv.setText("Hello Context");
         tv.setText(R.string.hello_world);
         //setContentView(tv);
+        System.out.println(getResources().getText(R.string.hello_world));
 
         iv = new ImageView(ContextMethod.this);
         iv.setImageResource(R.mipmap.ic_launcher);
         setContentView(iv);
 
-        System.out.println(getResources().getText(R.string.hello_world));
+
     }
 }

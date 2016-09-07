@@ -38,4 +38,16 @@
         android:layout_height="wrap_content"
         android:text="Start a Context method"
         android:id="@+id/btnStartContextMethod" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start ApplicationAty1"
+        android:id="@+id/btnStartAppAty1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start ApplicationAty2"
+        android:id="@+id/btnStartAppAty2" />
 </LinearLayout>
