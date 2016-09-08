@@ -20,6 +20,7 @@ public class App extends Application {
         return textData;
     }
 
+    //App start then do this
     @Override
     public void onCreate() {
         super.onCreate();
@@ -27,21 +28,25 @@ public class App extends Application {
         System.out.println("App onCreate");
     }
 
+    //App stop then do terminate
     @Override
     public void onTerminate() {
         super.onTerminate();
     }
 
+    //when memory isnt' enought then do it
     @Override
     public void onLowMemory() {
         super.onLowMemory();
     }
 
+    //release memory when stop app
     @Override
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
     }
 
+    //when system config change then do it
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
