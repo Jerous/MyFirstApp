@@ -16,6 +16,8 @@ public class ApplicationAty1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_application_aty1);
 
+        System.out.println("AppAty1 onCreate");
+
         textView = (TextView) findViewById(R.id.AppAtyTextView);
         editText = (EditText) findViewById(R.id.AppAtyeditText);
 

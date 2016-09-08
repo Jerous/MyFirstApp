@@ -1,6 +1,7 @@
 package com.tellustek.jerous.myfirstapp;
 
 import android.app.Application;
+import android.content.res.Configuration;
 
 import java.util.Set;
 
@@ -17,5 +18,32 @@ public class App extends Application {
 
     public String getTextData() {
         return textData;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        System.out.println("App onCreate");
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 }
