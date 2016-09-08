@@ -69,8 +69,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".ContextMethod" />
-        <activity android:name=".ApplicationAty1" android:label="AppAty1"/>
-        <activity android:name=".ApplicationAty2" android:label="AppAty2"/>
+        <activity
+            android:name=".ApplicationAty1"
+            android:label="AppAty1" />
+        <activity
+            android:name=".ApplicationAty2"
+            android:label="AppAty2" />
+        <activity android:name=".LearnSerivce" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

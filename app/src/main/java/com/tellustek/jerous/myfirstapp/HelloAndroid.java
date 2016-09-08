@@ -98,6 +98,13 @@ public class HelloAndroid extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btnLearnService).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HelloAndroid.this, LearnSerivce.class));
+            }
+        });
+
         System.out.println("A onCreate");
     }
 
