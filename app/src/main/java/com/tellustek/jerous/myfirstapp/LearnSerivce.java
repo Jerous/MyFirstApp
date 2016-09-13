@@ -70,7 +70,7 @@ public class LearnSerivce extends AppCompatActivity implements View.OnClickListe
         System.out.println("Service Connected.");
     }
 
-    //when serivce unbind then do
+    //when serivce was break or killed then do
     @Override
     public void onServiceDisconnected(ComponentName name) {
 

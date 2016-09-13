@@ -21,14 +21,14 @@ public class ApplicationAty1 extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.AppAtyTextView);
         editText = (EditText) findViewById(R.id.AppAtyeditText);
 
-        textView.setText("共享的數據是："+ getApp().getTextData());
+        textView.setText("共享的數據是：" + getApp().getTextData());
 
         findViewById(R.id.btnSave).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ((App)getApplicationContext()).setTextData(editText.getText().toString());
 
-                textView.setText("共享的數據是："+editText.getText().toString());
+                textView.setText("共享的數據是：" + editText.getText().toString());
             }
         });
     }

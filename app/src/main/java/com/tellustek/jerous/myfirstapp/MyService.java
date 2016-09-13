@@ -6,6 +6,9 @@ import android.os.Binder;
 import android.os.IBinder;
 
 public class MyService extends Service {
+
+    private boolean serviceRunning = false;
+
     public MyService() {
     }
 
@@ -21,12 +24,25 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
+        System.out.println("on Start Command.");
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    //when first time start service will run
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        System.out.println("Service Create.");
+
+        serviceRunning = true;
+
         new Thread() {
             @Override
             public void run() {
                 super.run();
 
-                while (true) {
+                while (serviceRunning) {
                     System.out.println("service is starting...");
 
                     try {
@@ -37,7 +53,14 @@ public class MyService extends Service {
                 }
             }
         }.start();
+    }
 
-        return super.onStartCommand(intent, flags, startId);
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        System.out.println("Service Destroy.");
+
+        serviceRunning = false;
     }
 }
