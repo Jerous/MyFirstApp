@@ -18,6 +18,12 @@
         android:text="Stop Service"
         android:id="@+id/btnStopService" />
 
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServiceEditText"
+        android:text="default text..."/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,4 +35,6 @@
         android:layout_height="wrap_content"
         android:text="Stop Bind Service"
         android:id="@+id/btnStopBindService" />
+
+
 </LinearLayout>

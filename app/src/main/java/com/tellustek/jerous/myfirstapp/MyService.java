@@ -8,6 +8,7 @@ import android.os.IBinder;
 public class MyService extends Service {
 
     private boolean serviceRunning = false;
+    private String data = "This is default message...";
 
     public MyService() {
     }
@@ -25,6 +26,8 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         System.out.println("on Start Command.");
+        data = intent.getStringExtra("data");
+
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -43,7 +46,7 @@ public class MyService extends Service {
                 super.run();
 
                 while (serviceRunning) {
-                    System.out.println("service is starting...");
+                    System.out.println(data);
 
                     try {
                         sleep(2000);

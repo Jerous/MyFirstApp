@@ -8,10 +8,12 @@ import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class LearnSerivce extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
 
     private Intent intent;
+    private EditText ServiceEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,7 @@ public class LearnSerivce extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_learn_serivce);
 
         intent = new Intent(LearnSerivce.this, MyService.class);
+        ServiceEditText = (EditText) findViewById(R.id.ServiceEditText);
 
         //use this to refactor new View.OnClickListener()
         /*findViewById(R.id.btnStartService).setOnClickListener(new View.OnClickListener() {
@@ -50,6 +53,7 @@ public class LearnSerivce extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnStartService:
+                intent.putExtra("data", ServiceEditText.getText().toString());
                 startService(intent);
                 break;
             case R.id.btnStopService:
