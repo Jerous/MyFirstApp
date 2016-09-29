@@ -36,5 +36,11 @@
         android:text="Stop Bind Service"
         android:id="@+id/btnStopBindService" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync Bind Message"
+        android:id="@+id/btnSyncBindMessage" />
+
 
 </LinearLayout>

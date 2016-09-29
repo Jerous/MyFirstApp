@@ -8,9 +8,17 @@ import android.os.IBinder;
 public class MyService extends Service {
 
     private boolean serviceRunning = false;
-    private String data = "This is default message...";
+    private String data = "This is bind message...";
 
     public MyService() {
+    }
+
+    //use textedit to change bind service message.
+    public class Binder extends android.os.Binder {
+
+        public void setData(String data) {
+            MyService.this.data = data;
+        }
     }
 
     @Override

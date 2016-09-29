@@ -15,6 +15,8 @@ public class LearnSerivce extends AppCompatActivity implements View.OnClickListe
     private Intent intent;
     private EditText ServiceEditText;
 
+    private MyService.Binder binder = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,8 @@ public class LearnSerivce extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btnStartBindService).setOnClickListener(this);
         findViewById(R.id.btnStopBindService).setOnClickListener(this);
+
+        findViewById(R.id.btnSyncBindMessage).setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +69,11 @@ public class LearnSerivce extends AppCompatActivity implements View.OnClickListe
             case R.id.btnStopBindService:
                 unbindService(this);
                 break;
+            case R.id.btnSyncBindMessage:
+                if (binder != null) {
+                    binder.setData(ServiceEditText.getText().toString());
+                }
+                break;
         }
     }
 
@@ -72,6 +81,8 @@ public class LearnSerivce extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
         System.out.println("Service Connected.");
+
+        binder = (MyService.Binder) service;
     }
 
     //when serivce was break or killed then do
