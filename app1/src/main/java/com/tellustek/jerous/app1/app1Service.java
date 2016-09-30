@@ -3,6 +3,7 @@ package com.tellustek.jerous.app1;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.os.RemoteException;
 
 public class app1Service extends Service {
     public app1Service() {
@@ -10,8 +11,12 @@ public class app1Service extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        return new IAppRemoteBinder.Stub() {
+            @Override
+            public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
+
+            }
+        };
     }
 
     //可用於接受從其他app傳遞過來的參數

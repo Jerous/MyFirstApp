@@ -18,4 +18,16 @@
         android:text="Stop App1 Service"
         android:id="@+id/btnStopApp1Service" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bind App1 Service"
+        android:id="@+id/btnBindApp1Service" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unbind App1 Service"
+        android:id="@+id/btnUnbindApp1Service" />
+
 </LinearLayout>
