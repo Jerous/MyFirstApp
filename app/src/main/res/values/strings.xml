@@ -3,4 +3,5 @@
     <string name="hello_world">Hello Jerous !!!</string>
     <string name="title_activity_new_aty">NewAty</string>
     <string name="title_base_theme_dialog">base theme dialog</string>
+    <string name="title_activity_learn_start_other_app_service">LearnStartOtherAppService</string>
 </resources>
