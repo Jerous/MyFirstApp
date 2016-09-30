@@ -56,4 +56,16 @@
         android:layout_height="wrap_content"
         android:text="Start Learn Service"
         android:id="@+id/btnLearnService" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start App1 Service"
+        android:id="@+id/btnStartApp1Service" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop App1 Service"
+        android:id="@+id/btnStopApp1Service" />
 </LinearLayout>

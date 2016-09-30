@@ -14,6 +14,12 @@ public class app1Service extends Service {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
+    //可用於接受從其他app傳遞過來的參數
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        return super.onStartCommand(intent, flags, startId);
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
