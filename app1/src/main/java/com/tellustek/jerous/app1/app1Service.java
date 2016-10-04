@@ -16,6 +16,11 @@ public class app1Service extends Service {
             public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
 
             }
+
+            @Override
+            public void setData(String data) throws RemoteException {
+                app1Service.this.data = data;
+            }
         };
     }
 
@@ -30,6 +35,26 @@ public class app1Service extends Service {
         super.onCreate();
 
         System.out.println("app1 Service onCreate.");
+
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+
+                app1ServiceRunning = true;
+                while (app1ServiceRunning) {
+
+                    System.out.println(data);
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        }.start();
     }
 
     @Override
@@ -37,5 +62,10 @@ public class app1Service extends Service {
         super.onDestroy();
 
         System.out.println("app1 Service onDestroy.");
+
+        app1ServiceRunning = false;
     }
+
+    private String data = "This is default app1service message....";
+    private boolean app1ServiceRunning = false;
 }

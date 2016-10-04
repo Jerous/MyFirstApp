@@ -30,4 +30,16 @@
         android:text="Unbind App1 Service"
         android:id="@+id/btnUnbindApp1Service" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="default message..."
+        android:id="@+id/etInput" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync message to App1Service"
+        android:id="@+id/btnSyncApp1Serivce" />
+
 </LinearLayout>
