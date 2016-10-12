@@ -29,7 +29,12 @@ public class LearnBroadcastReveiver extends AppCompatActivity implements View.On
                 //receiver建立action後需用隱式intent方式去建立intent
                 Intent i = new Intent(MyReceiver.ACTION);
                 i.putExtra("data", "這是送給Broadcast Receiver的訊息");
-                sendBroadcast(i);
+
+                //如果有用中斷recevier就要改用sendOrderedBroadcast方式
+                //sendBroadcast(i);
+
+                sendOrderedBroadcast(i, null);
+
                 break;
             case R.id.btnRegisterBroadcastReceiver:
                 if (receiver == null){

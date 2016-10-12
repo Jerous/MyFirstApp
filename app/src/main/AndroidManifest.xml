@@ -85,10 +85,26 @@
         <activity android:name=".LearnStartOtherAppService" />
         <activity android:name=".LearnBroadcastReveiver" />
 
+        <!-- 1.如果用動態產生receiver，不是常駐。就要拿掉下面的receiver標籤喔 -->
+        <!-- 2.後註冊的Receiver優先級高些，priority高的又在覆蓋優先級順序-->
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true">
+            <intent-filter android:priority="15">
+                <action android:name="com.tellustek.jerous.myfirstapp.intent.action.MyReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".MyReceiver1"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="10">
+                <action android:name="com.tellustek.jerous.myfirstapp.intent.action.MyReceiver" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

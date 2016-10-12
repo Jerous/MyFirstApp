@@ -4,12 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-public class MyReceiver extends BroadcastReceiver {
-
-    //建立action的約定成俗的格式
-    public static final String ACTION = "com.tellustek.jerous.myfirstapp.intent.action.MyReceiver";
-
-    public MyReceiver() {
+public class MyReceiver1 extends BroadcastReceiver {
+    public MyReceiver1() {
     }
 
     @Override
@@ -18,9 +14,6 @@ public class MyReceiver extends BroadcastReceiver {
         // an Intent broadcast.
         //throw new UnsupportedOperationException("Not yet implemented");
 
-        System.out.println("MyRevicer 接收到訊息了!" + intent.getStringExtra("data"));
-
-        //中斷後續receiver，不讓他們接收到訊息
-        abortBroadcast();
+        System.out.println("MyReceiver1 接收到訊息了");
     }
 }
