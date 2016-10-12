@@ -63,5 +63,11 @@
         android:text="Start Learn App1 Service"
         android:id="@+id/btnLearnStartApp1Service" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn Broadcast Receiver"
+        android:id="@+id/btnLearnBroadcastReceiver" />
+
 
 </LinearLayout>
