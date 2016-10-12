@@ -5,6 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 
 public class MyReceiver extends BroadcastReceiver {
+
+    //建立action的約定成俗的格式
+    public static final String ACTION = "com.tellustek.jerous.myfirstapp.intent.action.MyReceiver";
+
     public MyReceiver() {
     }
 

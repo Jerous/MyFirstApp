@@ -10,6 +10,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send Msg to Broadcast Receiver"
-        android:id="@+id/btnSendMsgToBroadcastReceiver"
-/>
+        android:id="@+id/btnSendMsgToBroadcastReceiver"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Broadcast Receiver"
+        android:id="@+id/btnRegisterBroadcastReceiver"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unregister Broadcast Receiver"
+        android:id="@+id/btnUnregisterBroadcastReceiver"/>
+
 </LinearLayout>
