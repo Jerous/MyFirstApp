@@ -23,5 +23,7 @@ public class LearnLog extends AppCompatActivity {
         Log.i(TAG, "log.info msg"); //普通用
         Log.d(TAG, "log.debug msg"); //DEBUG用
         Log.v(TAG, "log.verbose msg"); //廢話用
+
+        Log.e("MSG", "log.error no tag msg");
     }
 }
