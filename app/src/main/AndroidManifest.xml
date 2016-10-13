@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tellustek.jerous.myfirstapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -104,7 +106,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".LearnLog"></activity>
+        <activity android:name=".LearnLog" />
+        <activity android:name=".LearnWebView"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,6 @@ public class HelloAndroid extends AppCompatActivity implements View.OnClickListe
         //setContentView(R.layout.activity_hello_android);
         setContentView(R.layout.my_layout_test);
 
-
         findViewById(R.id.btnStartNewAty).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,6 +123,13 @@ public class HelloAndroid extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HelloAndroid.this, LearnLog.class));
+            }
+        });
+
+        findViewById(R.id.btnLearnWebView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HelloAndroid.this, LearnWebView.class));
             }
         });
 
