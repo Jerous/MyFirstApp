@@ -41,10 +41,10 @@ public class HelloAndroid extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
 
                 //顯示intent寫法
-                //Intent i = new Intent(HelloAndroid.this, NewAty.class);
+                //Intent i = new Intent(HelloAndroid.this, SendSomthingToOtherAty.class);
 
                 //用隱式intent改寫
-                Intent i = new Intent(NewAty.ACTION);
+                Intent i = new Intent(SendSomthingToOtherAty.ACTION);
 
                 //Send text direct
                 //i.putExtra("data", "this is send text from home aty.");
@@ -64,7 +64,7 @@ public class HelloAndroid extends AppCompatActivity implements View.OnClickListe
                 //i.putExtra("data", b);
 
                 //send user data by implements Serializable or parcelable from other activity
-                i.putExtra("user", new User("Jerous", 32, "tlu3@pchome.com.tw"));
+                Intent intent = i.putExtra("user", new User("Jerous", 32, "tlu3@pchome.com.tw"));
 
                 startActivity(i);
             }

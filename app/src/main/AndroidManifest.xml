@@ -24,13 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewAty">
+        <activity android:name=".SendSomthingToOtherAty">
 
             <!-- 用隱式INTENT改寫，可讓其他app CALL此activity -->
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <action android:name="com.tellustek.jerous.myfirstapp.intent.action.NewAty" />
+                <action android:name="com.tellustek.jerous.myfirstapp.intent.action.SendSomthingToOtherAty" />
             </intent-filter>
             <!-- END -->
         </activity>

@@ -5,12 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class NewAty extends AppCompatActivity {
+public class SendSomthingToOtherAty extends AppCompatActivity {
 
     private TextView getText;
 
     //隱式intent，定義變數免得打很長
-    public static final String ACTION = "com.tellustek.jerous.myfirstapp.intent.action.NewAty";
+    public static final String ACTION = "com.tellustek.jerous.myfirstapp.intent.action.SendSomthingToOtherAty";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
