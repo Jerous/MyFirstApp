@@ -120,7 +120,15 @@ public class HelloAndroid extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        findViewById(R.id.btnLearnLog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HelloAndroid.this, LearnLog.class));
+            }
+        });
+
         System.out.println("A onCreate");
+
     }
 
     @Override

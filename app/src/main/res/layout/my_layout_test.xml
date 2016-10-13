@@ -69,5 +69,11 @@
         android:text="Learn Broadcast Receiver"
         android:id="@+id/btnLearnBroadcastReceiver" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn Log"
+        android:id="@+id/btnLearnLog" />
+
 
 </LinearLayout>
