@@ -13,13 +13,15 @@ public class LearnLog extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_log);
 
+        //JAVA內建的訊息
         System.out.println("sout message");
         System.err.println("serr message");
 
-        Log.e(TAG, "log.error msg");
-        Log.w(TAG, "log.warning msg");
-        Log.i(TAG, "log.info msg");
-        Log.d(TAG, "log.debug msg");
-        Log.v(TAG, "log.verbose msg");
+        //ANDROID內建的訊息
+        Log.e(TAG, "log.error msg"); //錯誤用
+        Log.w(TAG, "log.warning msg"); //警告用
+        Log.i(TAG, "log.info msg"); //普通用
+        Log.d(TAG, "log.debug msg"); //DEBUG用
+        Log.v(TAG, "log.verbose msg"); //廢話用
     }
 }
