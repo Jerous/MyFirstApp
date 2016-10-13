@@ -2,8 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tellustek.jerous.myfirstapp">
 
+    <!-- 註冊新的自定權限 -->
+    <permission android:name="com.tellustek.jerous.myfirstapp.permission.SAY_HELLO"/>
+    
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!-- 添加新的自定權限在安裝時 -->
+    <uses-permission android:name="com.tellustek.jerous.myfirstapp.permission.SAY_HELLO"/>
+    
     <application
         android:name=".App"
         android:allowBackup="true"

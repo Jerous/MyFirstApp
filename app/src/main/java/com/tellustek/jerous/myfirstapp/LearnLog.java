@@ -25,5 +25,7 @@ public class LearnLog extends AppCompatActivity {
         Log.v(TAG, "log.verbose msg"); //廢話用
 
         Log.e("MSG", "log.error no tag msg");
+
+        Permission.sayHello(this);
     }
 }
