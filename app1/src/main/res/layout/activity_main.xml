@@ -17,9 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Start first App's NewAty"
         android:id="@+id/btnStartFirstAppNewAty"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/textView"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -32,4 +30,10 @@
         android:layout_height="wrap_content"
         android:text="StopApp1Service"
         android:id="@+id/btnStopApp1Service" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn Fragment"
+        android:id="@+id/btnLearnFragment" />
 </LinearLayout>

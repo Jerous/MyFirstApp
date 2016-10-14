@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tellustek.jerous.app1">
-    
-    <uses-permission android:name="com.tellustek.jerous.myfirstapp.permission.EmptyTestAty"/>
-    
+
+    <uses-permission android:name="com.tellustek.jerous.myfirstapp.permission.EmptyTestAty" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +21,9 @@
         <service
             android:name=".app1Service"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".LearnFragment"></activity>
     </application>
 
 </manifest>
