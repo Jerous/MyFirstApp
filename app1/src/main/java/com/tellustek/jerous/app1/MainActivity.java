@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btnStartApp1Service).setOnClickListener(this);
         findViewById(R.id.btnStopApp1Service).setOnClickListener(this);
-        findViewById(R.id.btnLearnFragment).setOnClickListener(this);
     }
 
     @Override
@@ -45,10 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnStopApp1Service:
                 stopService(intent);
-                break;
-            case R.id.btnLearnFragment:
-                intent = new Intent(MainActivity.this, LearnFragment.class);
-                startActivity(intent);
                 break;
         }
     }
