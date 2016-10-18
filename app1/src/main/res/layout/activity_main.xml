@@ -31,4 +31,9 @@
         android:text="StopApp1Service"
         android:id="@+id/btnStopApp1Service" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn Component"
+        android:id="@+id/btnLearnComponent" />
 </LinearLayout>
