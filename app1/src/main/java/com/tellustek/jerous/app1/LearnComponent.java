@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -24,7 +26,7 @@ public class LearnComponent extends AppCompatActivity implements CompoundButton.
 
     private Button btnChooseDate, btnChooseTime, btnRadioSubmit;
 
-    private RadioButton RadioButton1;
+    private RadioButton RadioButton1, RadioButton2, RadioButton3;
 
     private CheckBox checkBox1, checkBox2, checkBox3;
     private TextView tVcBout;
@@ -42,6 +44,8 @@ public class LearnComponent extends AppCompatActivity implements CompoundButton.
             btnChooseTime = (Button) findViewById(R.id.btnChooseTime);
 
             RadioButton1 = (RadioButton) findViewById(R.id.radioButton1);
+            RadioButton2 = (RadioButton) findViewById(R.id.radioButton2);
+            RadioButton3 = (RadioButton) findViewById(R.id.radioButton3);
             btnRadioSubmit = (Button) findViewById(R.id.btnRadioSubmit);
 
             checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
@@ -102,13 +106,36 @@ public class LearnComponent extends AppCompatActivity implements CompoundButton.
             });
 
             btnRadioSubmit.setOnClickListener(new View.OnClickListener() {
+
+                private Toast RadioToast;
+                private ImageView imageView;
+
                 @Override
                 public void onClick(View v) {
+                    RadioToast = Toast.makeText(LearnComponent.this, "選東西阿！笨蛋", Toast.LENGTH_SHORT);
+                    RadioToast.setGravity(Gravity.BOTTOM, 0, 0);
+
+                    //用image來取代Toast的文字這個layout
+                    //如果需要文字帶圖片，則需要新增一個layout，然後讓toast SET這個layout
+                    imageView = new ImageView(LearnComponent.this);
+                    imageView.setImageResource(R.mipmap.ic_launcher);
+                    RadioToast.setView(imageView);
+
+                    RadioToast.show();
+
                     if (RadioButton1.isChecked()) {
-                        Toast.makeText(LearnComponent.this, "所選的是正確的", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(LearnComponent.this, "所選的是錯誤的", Toast.LENGTH_SHORT).show();
+                        //改成顯示在top
+                        RadioToast = Toast.makeText(LearnComponent.this, "所選的是正確的", Toast.LENGTH_SHORT);
+                        RadioToast.setGravity(Gravity.TOP, 0, 0);
+                        RadioToast.show();
                     }
+
+                    if (RadioButton2.isChecked() || RadioButton3.isChecked()){
+                        RadioToast = Toast.makeText(LearnComponent.this, "所選的是錯誤的", Toast.LENGTH_SHORT);
+                        RadioToast.setGravity(Gravity.CENTER, 0, 0);
+                        RadioToast.show();
+                    }
+
                 }
             });
 
