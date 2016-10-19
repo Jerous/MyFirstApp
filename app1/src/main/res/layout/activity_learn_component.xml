@@ -25,4 +25,60 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnChooseTime" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="127dp" >
+
+        <RadioButton
+            android:text="test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="test2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="test3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton3"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <Button
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRadioSubmit" />
+
+    <CheckBox
+        android:text="打電動"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox1" />
+
+    <CheckBox
+        android:text="看小說"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox2" />
+
+    <CheckBox
+        android:text="耍廢"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox3" />
+
+    <TextView
+        android:text="你喜歡 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tVcBout" />
 </LinearLayout>
